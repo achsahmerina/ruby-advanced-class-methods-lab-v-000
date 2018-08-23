@@ -13,7 +13,13 @@ class Song
   def self.create
     song = self.new
     song.save
-    song 
+    song
+  end
+
+  def self.new_by_name
+    song = song.new_by_name("Blank Space")
+    song.name
+    song
   end
 
 end
