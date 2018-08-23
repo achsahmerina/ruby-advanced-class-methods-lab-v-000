@@ -17,8 +17,8 @@ class Song
   end
 
   def self.new_by_name
-    song = song.new_by_name("Blank Space")
-    song.name
+    song = self.new
+    song.name = name
     song
   end
 
