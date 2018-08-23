@@ -40,4 +40,16 @@ class Song
   def self.alphabetical
     self.all.uniq.sort_by { |song| song.name}
   end
+
+  def self.new_from_filename(song)
+    new_song = song.split("-")
+    artist_name = new_song[0]
+    song_name = new_song[1].gsub(".mp3","")
+
+    song = self.create
+    song.name = song_name
+    song.artist_name = artist_name
+    song
+
+  end
 end
